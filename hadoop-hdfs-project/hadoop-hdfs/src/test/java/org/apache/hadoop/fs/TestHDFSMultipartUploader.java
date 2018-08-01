@@ -41,8 +41,7 @@ public class TestHDFSMultipartUploader
   @BeforeClass
   public static void init() throws IOException {
     HdfsConfiguration conf = new HdfsConfiguration();
-    cluster = new MiniDFSCluster.Builder(conf,
-          GenericTestUtils.getRandomizedTestDir())
+    cluster = new MiniDFSCluster.Builder(conf)
         .numDataNodes(1)
         .build();
     cluster.waitClusterUp();
